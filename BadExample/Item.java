@@ -1,35 +1,30 @@
 package BadExample;
 
-enum State {
-	REGULARPRICE,
-	ONSALE;
-}
-
 public class Item {
 
 	private double price;
-	private State state;
+	private boolean isOnSale;
 	private double percentOff;
 
 
-	public Item(double price, State state) {
+	public Item(double price, boolean state) {
 		this.price = price;
-		this.state = state;
+		this.isOnSale = state;
 	}
 
 	public Item(double price) {
-		this(price, State.REGULARPRICE);
+		this(price, false);
 	}
 
-	public void setState(State state) {
-		if (state == State.REGULARPRICE) {
+	public void setState(boolean state) {
+		if (state == false) {
 			percentOff = 0;
 		}
-		this.state = state;
+		this.isOnSale = state;
 	}
 
 	public void setPercentOff(double percentOff) {
-		if(state == State.ONSALE) {
+		if(isOnSale == true) {
 			this.percentOff = percentOff;
 		}
 	}
