@@ -9,7 +9,7 @@ public class OnSale implements SalesState {
 	}
 
 	@Override
-	public double getPrice(Item item) {
-		return item.getRawPrice()*(1 - percentOff);
+	public double getPrice(Item item, double price) {
+		return price*(1 - percentOff);
 	}
 }

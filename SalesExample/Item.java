@@ -18,11 +18,7 @@ public class Item {
 		this.state = state;
 	}
 
-	public double getRawPrice() {
-		return price;
-	}
-
-	public double getSalesPrice() {
-		return state.getPrice(this);
+	public double getPrice() {
+		return state.getPrice(this, price);
 	}
 }
