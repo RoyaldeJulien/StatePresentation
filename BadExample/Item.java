@@ -16,7 +16,7 @@ public class Item {
 		this(price, false);
 	}
 
-	public void setState(boolean state) {
+	public void setOnSale(boolean state) {
 		if (state == false) {
 			percentOff = 0;
 		}
@@ -29,11 +29,7 @@ public class Item {
 		}
 	}
 
-	public double getRawPrice() {
-		return price;
-	}
-
-	public double getSalesPrice() {
+	public double getPrice() {
 		return price*(1 - percentOff);
 	}
 }

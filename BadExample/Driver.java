@@ -6,11 +6,11 @@ public class Driver {
 
 		Item item = new Item(500);
 
-		System.out.println(item.getSalesPrice());
-		item.setState(true);
+		System.out.println(item.getPrice());
+		item.setOnSale(true);
 		item.setPercentOff(.5);
-		System.out.println(item.getSalesPrice());
-		item.setState(false);
-		System.out.println(item.getSalesPrice());
+		System.out.println(item.getPrice());
+		item.setOnSale(false);
+		System.out.println(item.getPrice());
 	}
 }
