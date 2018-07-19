@@ -12,7 +12,7 @@ public class Commercial implements Show {
 
 	@Override
 	public void watch(Television TV) {
-		System.out.println("Watching Commercials..." + minutesRemaining);
+		System.out.println("Watching Commercials...");
 		if (minutesRemaining == 1) {
 			TV.setState(interruptedprogram);
 		}

@@ -9,7 +9,7 @@ public abstract class ThirtyMinuteShow implements Show {
 
 	@Override
 	public void watch(Television TV) {
-		System.out.println("Watching " + name + "..." + minutesRemaining);
+		System.out.println("Watching " + name + "...");
 		if(minutesRemaining == 4) {
 			TV.setState(new Commercial(3, nextShow()));
 		}
